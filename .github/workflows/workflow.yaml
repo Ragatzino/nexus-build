@@ -1,6 +1,6 @@
 name: Build nexus public
 run-name: build nexus public
-on: [push,tag]
+on: [push]
 jobs:
   build-nexus-public:
     runs-on: ubuntu-latest
