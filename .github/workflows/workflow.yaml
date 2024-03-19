@@ -11,8 +11,9 @@ jobs:
           submodules: recursive
       - run: |
           cd nexus-public
+      - run: |
           git fetch --tags
           git checkout release-3.45.0-01
+      - run: |
           ./mvnw clean install
-          ls
 
