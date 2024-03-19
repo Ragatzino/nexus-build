@@ -9,13 +9,16 @@ jobs:
         uses: actions/checkout@master
         with:
           submodules: recursive
-      - run: |
+      - name: get submodule tag
+        run: |
           cd nexus-public
           ls
           git fetch --tags
           git tag -l
           git checkout tags/release-3.45.0-01
-      - run: |
+      - name: Build zip file
+        run: |
           cd nexus-public
+          java -version
           ./mvnw clean install
 
