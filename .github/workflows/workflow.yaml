@@ -2,7 +2,7 @@ name: Build nexus public
 run-name: build nexus public
 on: [push]
 jobs:
-  build nexus public:
+  build-nexus-public:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
